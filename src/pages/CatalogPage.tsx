@@ -99,9 +99,10 @@ export default function CatalogPage({ navigate, addToCart }: Props) {
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`w-full text-left px-3 py-2 flex items-center gap-2 transition-colors ${
+                  style={selectedCategory === cat.id ? { background: '#FF8C00', color: '#fff' } : {}}
+                  className={`w-full text-left px-3 py-2 flex items-center gap-2 transition-all duration-200 ${
                     selectedCategory === cat.id
-                      ? 'bg-orange-DEFAULT text-white'
+                      ? ''
                       : 'hover:bg-muted text-steel-DEFAULT hover:text-white'
                   }`}
                 >
@@ -118,20 +119,24 @@ export default function CatalogPage({ navigate, addToCart }: Props) {
             <div className="space-y-1">
               <button
                 onClick={() => setSelectedBrand('all')}
-                className={`w-full text-left px-3 py-1.5 spec-tag transition-colors ${
-                  selectedBrand === 'all' ? 'text-orange-DEFAULT' : 'text-steel-DEFAULT hover:text-white'
+                style={selectedBrand === 'all' ? { color: '#FF8C00' } : {}}
+                className={`w-full text-left px-3 py-1.5 spec-tag transition-all duration-200 flex items-center gap-2 ${
+                  selectedBrand === 'all' ? '' : 'text-steel-DEFAULT hover:text-white'
                 }`}
               >
+                {selectedBrand === 'all' && <span className="w-1 h-3 inline-block" style={{ background: '#FF8C00' }} />}
                 Все бренды
               </button>
               {BRANDS.map(brand => (
                 <button
                   key={brand}
                   onClick={() => setSelectedBrand(brand)}
-                  className={`w-full text-left px-3 py-1.5 spec-tag transition-colors ${
-                    selectedBrand === brand ? 'text-orange-DEFAULT' : 'text-steel-DEFAULT hover:text-white'
+                  style={selectedBrand === brand ? { color: '#FF8C00' } : {}}
+                  className={`w-full text-left px-3 py-1.5 spec-tag transition-all duration-200 flex items-center gap-2 ${
+                    selectedBrand === brand ? '' : 'text-steel-DEFAULT hover:text-white'
                   }`}
                 >
+                  {selectedBrand === brand && <span className="w-1 h-3 inline-block" style={{ background: '#FF8C00' }} />}
                   {brand}
                 </button>
               ))}
@@ -198,10 +203,9 @@ export default function CatalogPage({ navigate, addToCart }: Props) {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`flex-shrink-0 px-3 py-1.5 spec-tag transition-colors ${
-                  selectedCategory === cat.id
-                    ? 'bg-orange-DEFAULT text-white'
-                    : 'border border-border text-steel-DEFAULT'
+                style={selectedCategory === cat.id ? { background: '#FF8C00', color: '#fff', borderColor: '#FF8C00' } : {}}
+                className={`flex-shrink-0 px-3 py-1.5 spec-tag transition-all duration-200 border ${
+                  selectedCategory === cat.id ? '' : 'border-border text-steel-DEFAULT hover:text-white hover:border-steel-DEFAULT'
                 }`}
               >
                 {cat.name}

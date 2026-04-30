@@ -49,10 +49,16 @@ function AppInner() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
 
+  const [transitioning, setTransitioning] = useState(false);
+
   const navigate = (page: Page, product?: Product) => {
-    setCurrentPage(page);
-    if (product) setSelectedProduct(product);
-    window.scrollTo(0, 0);
+    setTransitioning(true);
+    setTimeout(() => {
+      setCurrentPage(page);
+      if (product) setSelectedProduct(product);
+      window.scrollTo(0, 0);
+      setTransitioning(false);
+    }, 180);
   };
 
   const addToCart = (product: Product) => {
@@ -94,25 +100,33 @@ function AppInner() {
         onCartOpen={() => setCartOpen(true)}
       />
 
-      {currentPage === 'home' && (
-        <HomePage navigate={navigate} addToCart={addToCart} />
-      )}
-      {currentPage === 'catalog' && (
-        <CatalogPage navigate={navigate} addToCart={addToCart} />
-      )}
-      {currentPage === 'product' && selectedProduct && (
-        <ProductPage product={selectedProduct} navigate={navigate} addToCart={addToCart} />
-      )}
-      {currentPage === 'cart' && (
-        <CartPage
-          cartItems={cartItems}
-          removeFromCart={removeFromCart}
-          updateQuantity={updateQuantity}
-          navigate={navigate}
-        />
-      )}
-      {currentPage === 'about' && <AboutPage navigate={navigate} />}
-      {currentPage === 'contacts' && <ContactsPage />}
+      <div
+        style={{
+          opacity: transitioning ? 0 : 1,
+          transform: transitioning ? 'translateY(8px)' : 'translateY(0)',
+          transition: 'opacity 0.18s ease, transform 0.18s ease',
+        }}
+      >
+        {currentPage === 'home' && (
+          <HomePage navigate={navigate} addToCart={addToCart} />
+        )}
+        {currentPage === 'catalog' && (
+          <CatalogPage navigate={navigate} addToCart={addToCart} />
+        )}
+        {currentPage === 'product' && selectedProduct && (
+          <ProductPage product={selectedProduct} navigate={navigate} addToCart={addToCart} />
+        )}
+        {currentPage === 'cart' && (
+          <CartPage
+            cartItems={cartItems}
+            removeFromCart={removeFromCart}
+            updateQuantity={updateQuantity}
+            navigate={navigate}
+          />
+        )}
+        {currentPage === 'about' && <AboutPage navigate={navigate} />}
+        {currentPage === 'contacts' && <ContactsPage />}
+      </div>
 
       <CartSidebar
         open={cartOpen}
