@@ -28,7 +28,7 @@ export default function Navigation({ currentPage, navigate, cartCount, onCartOpe
           className="flex items-center gap-3 group"
         >
           <div className="w-8 h-8 bg-orange-DEFAULT flex items-center justify-center clip-corner">
-            <Icon name="Wrench" size={16} className="text-black" />
+            <Icon name="Wrench" size={16} className="text-white" />
           </div>
           <div>
             <div className="font-oswald font-bold text-xl text-white leading-none tracking-wider">
@@ -69,9 +69,9 @@ export default function Navigation({ currentPage, navigate, cartCount, onCartOpe
             onClick={onCartOpen}
             className="relative flex items-center gap-2 px-4 py-2 bg-orange-DEFAULT hover:bg-orange-400 transition-colors"
           >
-            <Icon name="ShoppingCart" size={16} className="text-black" />
+            <Icon name="ShoppingCart" size={16} className="text-zinc-900" />
             {cartCount > 0 && (
-              <span className="font-mono text-xs font-bold text-black">{cartCount}</span>
+              <span className="font-mono text-xs font-bold text-zinc-900">{cartCount}</span>
             )}
           </button>
 

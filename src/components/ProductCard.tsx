@@ -34,7 +34,7 @@ export default function ProductCard({ product, navigate, addToCart }: Props) {
         {/* Stock badge */}
         <div className="absolute top-3 right-3">
           {product.inStock ? (
-            <span className="spec-tag text-black bg-orange-DEFAULT px-2 py-1">В НАЛИЧИИ</span>
+            <span className="spec-tag text-white bg-orange-DEFAULT px-2 py-1">В НАЛИЧИИ</span>
           ) : (
             <span className="spec-tag text-white bg-steel-light px-2 py-1">ПОД ЗАКАЗ</span>
           )}
@@ -112,7 +112,7 @@ export default function ProductCard({ product, navigate, addToCart }: Props) {
             disabled={!product.inStock}
             className={`flex items-center gap-2 px-4 py-2 clip-corner transition-all ${
               product.inStock
-                ? 'bg-orange-DEFAULT hover:bg-orange-400 text-black'
+                ? 'bg-orange-DEFAULT hover:bg-orange-400 text-white'
                 : 'bg-muted text-steel-DEFAULT cursor-not-allowed'
             }`}
           >

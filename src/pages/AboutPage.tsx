@@ -123,7 +123,7 @@ export default function AboutPage({ navigate }: Props) {
             <p className="spec-tag text-steel-DEFAULT mb-6">Более 50 000 запчастей в наличии</p>
             <button
               onClick={() => navigate('catalog')}
-              className="px-10 py-4 bg-orange-DEFAULT text-black font-oswald text-xl tracking-wider hover:bg-orange-400 transition-colors clip-corner"
+              className="px-10 py-4 bg-orange-DEFAULT text-white font-oswald text-xl tracking-wider hover:bg-orange-400 transition-colors clip-corner"
             >
               ПЕРЕЙТИ В КАТАЛОГ
             </button>

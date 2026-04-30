@@ -51,7 +51,7 @@ export default function CartSidebar({ open, onClose, cartItems, removeFromCart, 
               </div>
               <button
                 onClick={() => { navigate('catalog'); onClose(); }}
-                className="px-6 py-3 bg-orange-DEFAULT text-black font-oswald tracking-wider hover:bg-orange-400 transition-colors"
+                className="px-6 py-3 bg-orange-DEFAULT text-white font-oswald tracking-wider hover:bg-orange-400 transition-colors"
               >
                 ПЕРЕЙТИ В КАТАЛОГ
               </button>
@@ -68,14 +68,14 @@ export default function CartSidebar({ open, onClose, cartItems, removeFromCart, 
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="w-6 h-6 bg-muted flex items-center justify-center hover:bg-orange-DEFAULT hover:text-black transition-colors"
+                        className="w-6 h-6 bg-muted flex items-center justify-center hover:bg-orange-DEFAULT hover:text-white transition-colors"
                       >
                         <Icon name="Minus" size={10} />
                       </button>
                       <span className="font-mono text-sm text-white w-4 text-center">{item.quantity}</span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="w-6 h-6 bg-muted flex items-center justify-center hover:bg-orange-DEFAULT hover:text-black transition-colors"
+                        className="w-6 h-6 bg-muted flex items-center justify-center hover:bg-orange-DEFAULT hover:text-white transition-colors"
                       >
                         <Icon name="Plus" size={10} />
                       </button>
@@ -105,7 +105,7 @@ export default function CartSidebar({ open, onClose, cartItems, removeFromCart, 
             </div>
             <button
               onClick={() => { navigate('cart'); onClose(); }}
-              className="w-full py-3 bg-orange-DEFAULT text-black font-oswald text-lg tracking-wider hover:bg-orange-400 transition-colors"
+              className="w-full py-3 bg-orange-DEFAULT text-white font-oswald text-lg tracking-wider hover:bg-orange-400 transition-colors"
             >
               ОФОРМИТЬ ЗАКАЗ
             </button>

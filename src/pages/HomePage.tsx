@@ -94,8 +94,8 @@ export default function HomePage({ navigate, addToCart }: Props) {
                 onClick={handleVinSearch}
                 className="px-6 bg-orange-DEFAULT hover:bg-orange-400 transition-colors flex items-center gap-2"
               >
-                <Icon name="Search" size={16} className="text-black" />
-                <span className="spec-tag text-black hidden sm:block">ПОДОБРАТЬ</span>
+                <Icon name="Search" size={16} className="text-white" />
+                <span className="spec-tag text-white hidden sm:block">ПОДОБРАТЬ</span>
               </button>
             </div>
 
@@ -118,7 +118,7 @@ export default function HomePage({ navigate, addToCart }: Props) {
                 </div>
                 <button
                   onClick={() => navigate('catalog')}
-                  className="mt-3 w-full py-2 bg-orange-DEFAULT text-black spec-tag hover:bg-orange-400 transition-colors"
+                  className="mt-3 w-full py-2 bg-orange-DEFAULT text-white spec-tag hover:bg-orange-400 transition-colors"
                 >
                   ПОКАЗАТЬ СОВМЕСТИМЫЕ ЗАПЧАСТИ →
                 </button>
@@ -130,7 +130,7 @@ export default function HomePage({ navigate, addToCart }: Props) {
           <div className="flex gap-4 mt-8 animate-fade-in-up delay-400">
             <button
               onClick={() => navigate('catalog')}
-              className="px-8 py-3 bg-orange-DEFAULT text-black font-oswald text-lg tracking-wider hover:bg-orange-400 transition-all clip-corner"
+              className="px-8 py-3 bg-orange-DEFAULT text-white font-oswald text-lg tracking-wider hover:bg-orange-400 transition-all clip-corner"
             >
               КАТАЛОГ ЗАПЧАСТЕЙ
             </button>
@@ -261,10 +261,10 @@ export default function HomePage({ navigate, addToCart }: Props) {
             <div className="flex-shrink-0">
               <button
                 onClick={() => navigate('catalog')}
-                className="group relative px-10 py-5 bg-orange-DEFAULT text-black font-oswald text-xl tracking-wider hover:bg-orange-400 transition-all clip-corner-lg"
+                className="group relative px-10 py-5 bg-orange-DEFAULT text-white font-oswald text-xl tracking-wider hover:bg-orange-400 transition-all clip-corner-lg"
               >
                 ПОДОБРАТЬ ЗАПЧАСТИ
-                <div className="mt-1 spec-tag text-black/70">по VIN или марке мотоцикла</div>
+                <div className="mt-1 spec-tag text-white/70">по VIN или марке мотоцикла</div>
               </button>
             </div>
           </div>
@@ -276,7 +276,7 @@ export default function HomePage({ navigate, addToCart }: Props) {
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 bg-orange-DEFAULT clip-corner flex items-center justify-center">
-              <Icon name="Wrench" size={12} className="text-black" />
+              <Icon name="Wrench" size={12} className="text-white" />
             </div>
             <span className="font-oswald text-white tracking-wider">MOTOPARTS</span>
           </div>

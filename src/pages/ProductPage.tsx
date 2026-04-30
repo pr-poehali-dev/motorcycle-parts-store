@@ -143,7 +143,7 @@ export default function ProductPage({ product, navigate, addToCart }: Props) {
                 disabled={!product.inStock}
                 className={`flex-1 flex items-center justify-center gap-3 py-3 font-oswald text-lg tracking-wider transition-all clip-corner ${
                   product.inStock
-                    ? 'bg-orange-DEFAULT hover:bg-orange-400 text-black'
+                    ? 'bg-orange-DEFAULT hover:bg-orange-400 text-white'
                     : 'bg-muted text-steel-DEFAULT cursor-not-allowed'
                 }`}
               >

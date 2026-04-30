@@ -86,7 +86,7 @@ export default function CatalogPage({ navigate, addToCart }: Props) {
               maxLength={17}
               className="w-full bg-background border border-border focus:border-orange-DEFAULT outline-none px-3 py-2 font-mono text-white text-xs placeholder-steel-DEFAULT transition-colors mb-2"
             />
-            <button className="w-full py-2 bg-orange-DEFAULT text-black spec-tag hover:bg-orange-400 transition-colors">
+            <button className="w-full py-2 bg-orange-DEFAULT text-white spec-tag hover:bg-orange-400 transition-colors">
               НАЙТИ СОВМЕСТИМЫЕ
             </button>
           </div>
@@ -101,7 +101,7 @@ export default function CatalogPage({ navigate, addToCart }: Props) {
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`w-full text-left px-3 py-2 flex items-center gap-2 transition-colors ${
                     selectedCategory === cat.id
-                      ? 'bg-orange-DEFAULT text-black'
+                      ? 'bg-orange-DEFAULT text-white'
                       : 'hover:bg-muted text-steel-DEFAULT hover:text-white'
                   }`}
                 >
@@ -200,7 +200,7 @@ export default function CatalogPage({ navigate, addToCart }: Props) {
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`flex-shrink-0 px-3 py-1.5 spec-tag transition-colors ${
                   selectedCategory === cat.id
-                    ? 'bg-orange-DEFAULT text-black'
+                    ? 'bg-orange-DEFAULT text-white'
                     : 'border border-border text-steel-DEFAULT'
                 }`}
               >

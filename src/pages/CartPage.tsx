@@ -37,7 +37,7 @@ export default function CartPage({ cartItems, removeFromCart, updateQuantity, na
           </p>
           <button
             onClick={() => navigate('catalog')}
-            className="px-8 py-3 bg-orange-DEFAULT text-black font-oswald tracking-wider hover:bg-orange-400 transition-colors clip-corner"
+            className="px-8 py-3 bg-orange-DEFAULT text-white font-oswald tracking-wider hover:bg-orange-400 transition-colors clip-corner"
           >
             ПРОДОЛЖИТЬ ПОКУПКИ
           </button>
@@ -62,7 +62,7 @@ export default function CartPage({ cartItems, removeFromCart, updateQuantity, na
               <div key={s} className="flex items-center gap-3">
                 <div className={`flex items-center gap-2 ${step === s ? 'text-orange-DEFAULT' : 'text-steel-DEFAULT'}`}>
                   <div className={`w-6 h-6 flex items-center justify-center text-xs font-mono border ${
-                    step === s ? 'border-orange-DEFAULT bg-orange-DEFAULT text-black' : 'border-border'
+                    step === s ? 'border-orange-DEFAULT bg-orange-DEFAULT text-white' : 'border-border'
                   }`}>
                     {i + 1}
                   </div>
@@ -89,7 +89,7 @@ export default function CartPage({ cartItems, removeFromCart, updateQuantity, na
                     <p className="font-oswald text-white text-xl mb-2">КОРЗИНА ПУСТА</p>
                     <button
                       onClick={() => navigate('catalog')}
-                      className="mt-4 px-8 py-3 bg-orange-DEFAULT text-black font-oswald tracking-wider hover:bg-orange-400 transition-colors"
+                      className="mt-4 px-8 py-3 bg-orange-DEFAULT text-white font-oswald tracking-wider hover:bg-orange-400 transition-colors"
                     >
                       В КАТАЛОГ
                     </button>
@@ -248,7 +248,7 @@ export default function CartPage({ cartItems, removeFromCart, updateQuantity, na
               {step === 'cart' && cartItems.length > 0 && (
                 <button
                   onClick={() => setStep('delivery')}
-                  className="w-full py-3 bg-orange-DEFAULT text-black font-oswald tracking-wider hover:bg-orange-400 transition-colors clip-corner"
+                  className="w-full py-3 bg-orange-DEFAULT text-white font-oswald tracking-wider hover:bg-orange-400 transition-colors clip-corner"
                 >
                   К ОФОРМЛЕНИЮ →
                 </button>
@@ -257,7 +257,7 @@ export default function CartPage({ cartItems, removeFromCart, updateQuantity, na
               {step === 'delivery' && (
                 <button
                   onClick={() => setStep('confirm')}
-                  className="w-full py-3 bg-orange-DEFAULT text-black font-oswald tracking-wider hover:bg-orange-400 transition-colors clip-corner"
+                  className="w-full py-3 bg-orange-DEFAULT text-white font-oswald tracking-wider hover:bg-orange-400 transition-colors clip-corner"
                 >
                   ПРОВЕРИТЬ ЗАКАЗ →
                 </button>
@@ -266,7 +266,7 @@ export default function CartPage({ cartItems, removeFromCart, updateQuantity, na
               {step === 'confirm' && (
                 <button
                   onClick={() => setOrderPlaced(true)}
-                  className="w-full py-3 bg-orange-DEFAULT text-black font-oswald tracking-wider hover:bg-orange-400 transition-colors clip-corner"
+                  className="w-full py-3 bg-orange-DEFAULT text-white font-oswald tracking-wider hover:bg-orange-400 transition-colors clip-corner"
                 >
                   ПОДТВЕРДИТЬ ЗАКАЗ
                 </button>

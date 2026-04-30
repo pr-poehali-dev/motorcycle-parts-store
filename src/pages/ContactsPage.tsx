@@ -128,7 +128,7 @@ export default function ContactsPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-4 bg-orange-DEFAULT text-black font-oswald text-lg tracking-wider hover:bg-orange-400 transition-colors clip-corner"
+                    className="w-full py-4 bg-orange-DEFAULT text-white font-oswald text-lg tracking-wider hover:bg-orange-400 transition-colors clip-corner"
                   >
                     ОТПРАВИТЬ СООБЩЕНИЕ
                   </button>
