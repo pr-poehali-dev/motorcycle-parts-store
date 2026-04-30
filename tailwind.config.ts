@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1777567208566378032.html"
 	],
 	prefix: "",
 	theme: {
@@ -89,6 +90,25 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				'oswald': ['Oswald', 'sans-serif'],
+				'mono': ['IBM Plex Mono', 'monospace'],
+				'sans': ['IBM Plex Sans', 'sans-serif'],
+			},
+			colors: {
+				orange: {
+					DEFAULT: '#FF8C00',
+					500: '#FF8C00',
+					400: '#FFA500',
+					600: '#E07800',
+				},
+				steel: {
+					DEFAULT: '#7a8a94',
+					dark: '#1a1f22',
+					mid: '#2a3035',
+					light: '#3a454e',
+				}
 			}
 		}
 	},
